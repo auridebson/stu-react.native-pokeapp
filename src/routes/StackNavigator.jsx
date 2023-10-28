@@ -1,7 +1,7 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack"
 import { Home, Details } from "../screens"
 
-const { Screen, Navigator } = createNativeStackNavigator
+const { Screen, Navigator } = createNativeStackNavigator()
 
 export function StackNavigator() {
     return (
