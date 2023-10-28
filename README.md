@@ -27,3 +27,8 @@ npx expo install react-native-web@~0.19.6 react-dom@18.2.0 @expo/webpack-config@
 -- GERANDO O APK
 npm install -g eas-cli
 eas build
+
+# Dados da API Poke
+https://pokeapi.co/
+https://pokeapi.co/docs/v2#pokemon-section
+
