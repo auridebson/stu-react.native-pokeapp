@@ -4,7 +4,7 @@ import { FlatList } from "react-native-gesture-handler"
 
 export function Home() {
 
-        const [data, setData] = useEffect
+    const [data, setData] = useEffect([])
 
     useEffect(() => {
         fetch('https://pokeapi.co/api/v2/pokemon')
