@@ -32,3 +32,7 @@ eas build
 https://pokeapi.co/
 https://pokeapi.co/docs/v2#pokemon-section
 
+
+# Estilização
+npm install styled-components
+- https://styled-components.com/docs/basics#installation
