@@ -1,10 +1,10 @@
-import { useEffect } from "react"
-import { View, Text } from "react-native"
-import { FlatList } from "react-native-gesture-handler"
+import { useEffect, useState } from "react"
+import { FlatList, View, Text } from "react-native"
+import { ListItem } from "./styles"
 
-export function Home() {
+export function Home({ navigation }) {
 
-    const [data, setData] = useEffect([])
+    const [data, setData] = useState([])
 
     useEffect(() => {
         fetch('https://pokeapi.co/api/v2/pokemon')
@@ -19,8 +19,11 @@ export function Home() {
     
         <FlatList
             data={data.results}
-            resnderItem={({ item: {name} }) =>  (
-                <Text>{name}</Text>
+            renderItem={({ item: {name} }) =>  (
+                <ListItem onPress={() => navigation.navigate('Details')}>
+                    <Text>{name}</Text>
+                </ListItem>
+                
             )}
         />
     </View>
