@@ -11,6 +11,7 @@ npm install @react-navigation/native-stack
 
 npx expo install react-native-screens react-native-safe-area-context
 npx expo install react-native-gesture-handler
+npx expo install react-native-pager-view
 
 - Verificar documentação do React Navigation
 - https://reactnavigation.org/docs/getting-started

@@ -16,21 +16,23 @@ export const HeaderTitle = styled.Text`
 `
 
 export const HeaderSubTitle = styled.Text`
-    font-size: 18px;
+    font-size: 16px;
 `
 
 export const ListItem = styled.TouchableOpacity`
-    background-color: #f4F;
+    background-color: #e7e7e7;
     padding: 12px;
     margin: 6px 8px;
     border-radius: 18px;
     flex-direcion: row;
     justify-content: space-between;
     align-items: center;
+
 `
 
 export const ListItemText = styled.Text`
-
+    text-transform: capitalize;
+        box-shadow: 1px 1px 1px;
 
 `
 
