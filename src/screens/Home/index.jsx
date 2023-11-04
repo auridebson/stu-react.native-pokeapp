@@ -27,7 +27,7 @@ export function Home({ navigation }) {
                 marginBottom: 120
             }}
             data={data}
-            renderItem={({ item: {name}, index}) =>  (
+            renderItem={({ item: {name, url}, index}) =>  (
                 <ListItem onPress={() => navigation.navigate('Details')}>
                     <ListItemText>{name}</ListItemText>
                     <PokemonImagem
@@ -35,7 +35,6 @@ export function Home({ navigation }) {
                             uri:`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${index}.png`
                         }} />
                 </ListItem>
-
                 
             )}
         />
