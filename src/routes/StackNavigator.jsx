@@ -5,7 +5,7 @@ const { Screen, Navigator } = createNativeStackNavigator()
 
 export function StackNavigator() {
     return (
-        <Navigator>
+        <Navigator screenOptions="">
             <Screen name="Home" component={Home} />
             <Screen name="Details" component={Details} />
         </Navigator>

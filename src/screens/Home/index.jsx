@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { FlatList, View, Text } from "react-native"
-import { ListItem } from "./styles"
+import { Container, ListItem } from "./styles"
 import { Details } from "../Details"
 
 export function Home({ navigation }) {
@@ -12,11 +12,19 @@ export function Home({ navigation }) {
         .then(response => response.json())
         .then(json => setData(json.results))
     }, [])
+
+    const i = 0
         
 
     return (
-    <View>
-        {data.map(({name}) => <Text>{name}</Text>)}
+    <Container>
+        {data.map(({name}) => (
+        <Text>{name}</Text>
+        
+        )
+        
+        
+        )}
 
     
         <FlatList
@@ -25,11 +33,11 @@ export function Home({ navigation }) {
                 <ListItem onPress={() => navigation.navigate('Details')}>
                     <Text>{name}</Text>
                 </ListItem>
-                
+
                 
             )}
         />
-    </View>
+    </Container>
 
     )
 }
