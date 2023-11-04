@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
-import { FlatList, View, Text, TextInput } from "react-native"
-import { Container, Header, HeaderTitle, HeaderSubTitle, ListItem } from "./styles"
+import { FlatList, View, Text, TextInput, Image } from "react-native"
+import { Container, Header, HeaderTitle, HeaderSubTitle, ListItem, ListItemText, PokemonImagem } from "./styles"
 
 export function Home({ navigation }) {
 
@@ -24,9 +24,13 @@ export function Home({ navigation }) {
 
         <FlatList
             data={data}
-            renderItem={({ item: {name}}) =>  (
+            renderItem={({ item: {name}, index}) =>  (
                 <ListItem onPress={() => navigation.navigate('Details')}>
-                    <Text>{name}</Text>
+                    <ListItemText>{name}</ListItemText>
+                    <PokemonImagem
+                        source={{
+                            uri:`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${index}.png`
+                        }} />
                 </ListItem>
 
                 
