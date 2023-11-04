@@ -23,6 +23,9 @@ export function Home({ navigation }) {
         </Header>
 
         <FlatList
+            style={{
+                marginBottom: 120
+            }}
             data={data}
             renderItem={({ item: {name}, index}) =>  (
                 <ListItem onPress={() => navigation.navigate('Details')}>
