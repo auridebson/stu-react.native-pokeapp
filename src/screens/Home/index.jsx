@@ -14,7 +14,6 @@ export function Home({ navigation }) {
 
     const i = 0
         
-
     return (
     <Container>
         <Header>
