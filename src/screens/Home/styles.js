@@ -14,6 +14,7 @@ export const Header = styled.View`
 export const HeaderTitle = styled.Text`
     font-size: 28px;
 `
+
 export const HeaderSubTitle = styled.Text`
     font-size: 18px;
 `

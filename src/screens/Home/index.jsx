@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { FlatList, View, Text } from "react-native"
+import { FlatList, View, Text, TextInput } from "react-native"
 import { Container, Header, HeaderTitle, HeaderSubTitle, ListItem } from "./styles"
 
 export function Home({ navigation }) {
@@ -21,15 +21,10 @@ export function Home({ navigation }) {
             <HeaderTitle>Pokedex</HeaderTitle>
             <HeaderSubTitle>Busque seu pokemon</HeaderSubTitle>
         </Header>
-        {data.map(({name}) => (
-        <Text>{name}</Text>
-        )
-        
-        )}
 
         <FlatList
-            data={data.results}
-            renderItem={({ item: {name} }) =>  (
+            data={data}
+            renderItem={({ item: {name}}) =>  (
                 <ListItem onPress={() => navigation.navigate('Details')}>
                     <Text>{name}</Text>
                 </ListItem>
