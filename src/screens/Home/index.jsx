@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react"
 import { FlatList, View, Text } from "react-native"
-import { Container, ListItem } from "./styles"
-import { Details } from "../Details"
+import { Container, Header, HeaderTitle, HeaderSubTitle, ListItem } from "./styles"
 
 export function Home({ navigation }) {
 
@@ -18,15 +17,16 @@ export function Home({ navigation }) {
 
     return (
     <Container>
+        <Header>
+            <HeaderTitle>Pokedex</HeaderTitle>
+            <HeaderSubTitle>Busque seu pokemon</HeaderSubTitle>
+        </Header>
         {data.map(({name}) => (
         <Text>{name}</Text>
-        
         )
-        
         
         )}
 
-    
         <FlatList
             data={data.results}
             renderItem={({ item: {name} }) =>  (
@@ -37,6 +37,7 @@ export function Home({ navigation }) {
                 
             )}
         />
+
     </Container>
 
     )
