@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { FlatList, View, Text } from "react-native"
 import { ListItem } from "./styles"
+import { Details } from "../Details"
 
 export function Home({ navigation }) {
 
@@ -16,6 +17,7 @@ export function Home({ navigation }) {
     return (
     <View>
         {data.map(({name}) => <Text>{name}</Text>)}
+
     
         <FlatList
             data={data.results}
@@ -24,8 +26,10 @@ export function Home({ navigation }) {
                     <Text>{name}</Text>
                 </ListItem>
                 
+                
             )}
         />
     </View>
+
     )
 }

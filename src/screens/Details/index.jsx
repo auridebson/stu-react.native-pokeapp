@@ -6,6 +6,9 @@ export function Details() {
         <Text>Details</Text>
         <Text>Details</Text>
         <Text>Details</Text>
+        <Text>Details</Text>
+        <Text>Details</Text>
+
     </View>
     )
 }
