@@ -10,7 +10,7 @@ export function Details({route: {params}}) {
         .then(json => setDataDetails(json))
     }, [])
 
-    
+
     return (
     <View>
         <Text>{dataDetails.name}</Text>
