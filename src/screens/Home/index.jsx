@@ -27,7 +27,9 @@ export function Home({ navigation }) {
             }}
             data={data}
             renderItem={({ item: {name, url}, index}) =>  (
-                <ListItem onPress={() => navigation.navigate('Details')}>
+                <ListItem onPress={() => navigation.navigate('Details', {
+                    url
+                })}>
                     <ListItemText>{name}</ListItemText>
                     <PokemonImagem
                         source={{
